@@ -44,13 +44,20 @@ namespace CasaDoCodigo.Controllers
 
         public IActionResult Cadastro()
         {
+            var pedido = pedidoRepository.GetPedido();
+            
+            if (pedido == null)
+            {
+                return RedirectToAction("Carrocel");
+            }
             return View();
         }
 
-        public IActionResult Resumo()
+        [HttpPost]
+        public IActionResult Resumo(Cadastro cadastro)
         {
-            Pedido pedido = pedidoRepository.GetPedido();
-            return View(pedido);
+            
+            return View(pedidoRepository.GetPedido());
         }
 
         [HttpPost]
