@@ -76,6 +76,7 @@ namespace CasaDoCodigo.Models
         {
             this.Bairro = novoCadastro.Bairro;
             this.CEP = novoCadastro.CEP;
+            this.Endereco = novoCadastro.Endereco;
             this.Complemento = novoCadastro.Complemento;
             this.Email = novoCadastro.Email;
             this.Municipio = novoCadastro.Municipio;
